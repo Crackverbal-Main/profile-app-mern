@@ -515,7 +515,15 @@ const PDFUploader = () => {
           personalized path to a management program. They're ready to help you
           strategize and answer any questions
         </p>
-        <button className="upload-button">Schedule My Free Call</button>
+        <button
+          className="upload-button"
+          onClick={() => {
+            window.location.href =
+              "https://calendly.com/studentsupport-1/counselling-call-crackverbal?utm_source=profile-app&utm_campaign=profile-eval&utm_medium=profile-page";
+          }}
+        >
+          Schedule My Free Call
+        </button>
       </div>
       <footer>
         <div className="footerbar">
