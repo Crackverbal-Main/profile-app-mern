@@ -3,6 +3,7 @@ import axios from "axios";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import toast, { Toaster } from "react-hot-toast";
+import HowItWorks from "./HowItWorks";
 
 const PDFUploader = () => {
   const [uploadedPdfId, setUploadedPdfId] = useState(null);
@@ -254,141 +255,75 @@ const PDFUploader = () => {
             </button>
           </div>
         </nav>
-        <div className="profile-evaluation-section">
-          <div className="text-container">
-            <h1>
-              Evaluate Your Fitment for a{" "}
-              <span className="blue-color-text">Management Program</span>
-            </h1>
-            <p>
-              Use our Profile Evaluation Tool to assess your readiness for
-              management programs. Simply upload your resume or CV, and our tool
-              will analyze your fitment for various management courses.
-            </p>
-            <input
-              type="file"
-              ref={fileInputRef}
-              onChange={handleFileChange}
-              accept="application/pdf"
-              style={{ display: "none" }}
-            />
-            <button onClick={handleButtonClick} className="upload-button">
-              Upload My Resume
-            </button>
-          </div>
-          <div className="image-container">
-            <img
-              src="https://lh3.googleusercontent.com/3tEeGNkBJnXg0N9dJu7oumnaFtmUKCcZl-cOKlhAYBtE3VvqmDf0W9HFBHCVBEOoH4Szf9QpOlSrgBRL4q4vOYdll1_GHiVL1eE=w380"
-              alt="Profile Evaluation"
-            />
+        <div className="profile-eval-parent">
+          <div className="profile-evaluation-section">
+            <div className="image-container">
+              <img src="/9.png" alt="Profile Evaluation" />
+            </div>
+            <div className="text-container">
+              <h1>
+                Evaluate Your Fitment for a{" "}
+                <span className="blue-color-text">Management Program</span>
+              </h1>
+              <p>
+                Discover Your Potential with Our Advanced Profile Evaluation
+                Tool. Upload Your Resume and Begin Your Journey.
+              </p>
+              <input
+                type="file"
+                ref={fileInputRef}
+                onChange={handleFileChange}
+                accept="application/pdf"
+                style={{ display: "none" }}
+              />
+              <button onClick={handleButtonClick} className="upload-button">
+                Upload My Resume
+              </button>
+            </div>
           </div>
         </div>
+
         <div className="management-journey-section">
-          <div className="management-text">
-            <p>
-              Embarking on a management journey requires insight, preparation,
-              and the right fit. That's where we come in! Our Profile Evaluation
-              Tool is designed to illuminate your path to success in the
-              management realm.
-              <br />
-              <br />
-              Just upload your resume or CV, and let us do the rest.
-              <br />
-              <br />
-              What will you get? A comprehensive analysis tailored to your
-              profile, showcasing how you align with various management
-              programs. It's straightforward, insightful, and completely
-              tailored to you.
-            </p>
+          <h2 className="section-title">
+            Why Use Our
+            <span className="blue-color-text"> Profile Evaluation Tool?</span>
+          </h2>
+          <div className="management-card-main">
+            <div className="management-card">
+              <img src="/12.png" alt="card1" />
+              <h3 className="blue-color-text">Tailored Analysis:</h3>
+              <p>
+                Receive a detailed analysis of your academic and professional
+                background, personalized to align with various management
+                programs.
+              </p>
+            </div>
+            <div className="management-card">
+              <img src="/15.png" alt="card2" />
+              <h3 className="blue-color-text">Insightful Feedback:</h3>
+              <p>
+                Understand how your profile fits with management program
+                expectations, including your strengths and areas for
+                improvement.
+              </p>
+            </div>
+            <div className="management-card">
+              <img src="/14.png" alt="card3" />
+              <h3 className="blue-color-text">Simple and Effective:</h3>
+              <p>
+                Just upload your resume or CV, and our tool takes care of the
+                rest, providing straightforward and insightful results.
+              </p>
+            </div>
           </div>
         </div>
 
-        <div className="how-to-use-section">
-          <h2>
-            How to Use this Tool to Evaluate Your Profile and{" "}
-            <span className="blue-color-text">Plan Your Next Steps</span>
+        <div style={{ marginTop: "70px" }}>
+          <h2 className="section-title">
+            <span className="blue-color-text">How It Works: </span>
+            Your Path to Management Program Readiness
           </h2>
-          <div className="cards-container">
-            <div className="card">
-              <img
-                src="https://lh3.googleusercontent.com/olj0WNmHgUOjQYpi8WjfHZEG95Ny7MQqZUplro5kSgy8UviHO0cRgROUK2fQDfiCdqvXlqNqJcwx98lWeDe2Xr080tkDK-mnCw=s0"
-                width="80"
-                alt=""
-              />
-              <div>
-                <h3>Step 1: Fill Out a Brief Form</h3>
-                <p>
-                  Start your journey by providing some basic information about
-                  yourself and your career aspirations. This will help us tailor
-                  the evaluation to your unique profile.
-                </p>
-              </div>
-            </div>
-            <div className="card">
-              <img
-                src="https://lh3.googleusercontent.com/ly8yPCJu3jBCYghmMQdiwryUJz0_s6MfkyHBZ__9qHwyXiaAFmtUfK1erZq00bOiO1voJlfygoCdJlL9rnbry_Kh__-I1G6pXjQ=s0"
-                width="80"
-                alt=""
-              />
-
-              <div>
-                <h3>Step 2: Upload Your Resume/CV</h3>
-                <p>
-                  Attach your most recent resume or CV. Our tool uses this
-                  information to assess your academic background, professional
-                  experience, and extracurricular activities.
-                </p>
-              </div>
-            </div>
-            <div className="card">
-              <img
-                src="https://lh3.googleusercontent.com/Hgo4hXEglNPL3a3RCxsO8olfECbM0TdRJowG6HE0ltOwT-YZx9jivimyYZfmo2SGI9G608O0NhliqeuOGKQAh-e5Loe3rnj5o50=s0"
-                width="80"
-                alt=""
-              />
-
-              <div>
-                <h3>Step 3: Wait for Our AI to Do Its Magic</h3>
-                <p>
-                  Sit back and relax while our advanced AI analyzes your
-                  details. It cross references your profile with management
-                  program criteria to provide a comprehensive evaluation.
-                </p>
-              </div>
-            </div>
-            <div className="card">
-              <img
-                src="https://lh3.googleusercontent.com/_5-f_4KVVazwOzzDFjL47Oiq1P6mhmbGES82m_m1AAITzIC4yq3EMUfVux1EN09Z2IKC_CEL0VZXwRvm_d5aVEwPgbu8KteKyvVE=s0"
-                width="80"
-                alt=""
-              />
-
-              <div>
-                <h3>Step 4: View Your Analysis</h3>
-                <p>
-                  Receive a detailed report on your fitment for management
-                  programs. Understand your strengths, areas for improvement,
-                  and how you compare to typical program candidates
-                </p>
-              </div>
-            </div>
-            <div className="card">
-              <img
-                src="https://lh3.googleusercontent.com/CpXc5hbW4jh9PxeAJP9uAtsWG9LtlAAZGKdzjkFEGabYiFjGeQjRVBdmVxXS9zvbzmVouyO0PkJsxXX5uCpCkL2eHly1HgZjag=s0"
-                width="80"
-                alt=""
-              />
-
-              <div>
-                <h3>Step 5: Schedule a Call with an Expert</h3>
-                <p>
-                  Take it further by scheduling a consultation with one of our
-                  experts. They will help you interpret your results and discuss
-                  your next steps towards management success.
-                </p>
-              </div>
-            </div>
-          </div>
+          <HowItWorks />
         </div>
       </div>
       <hr className="custom-hr" />
@@ -413,9 +348,9 @@ const PDFUploader = () => {
               style={{ display: "none" }}
             />
             <img
-              src="https://lh3.googleusercontent.com/QqIro2iF868BmqZARB7u_JvZ_CR9JDOzQhdsDCngPsBOuXYlEj6_1-fnq4FPOyBs0mQbFJQdz_sXPKfIGOkSpmDCYPiRY7XF3p8=s0"
+              src="/Group-179.png"
               alt="Upload Icon"
-              width={80}
+              width={100}
               className="upload-icon"
             />
             <p>Drag and drop, or click to upload</p>
@@ -520,44 +455,26 @@ const PDFUploader = () => {
         </div>
       </div>
       <hr className="custom-hr" />
-      <div className="insights-section">
-        <h2>
-          Ready to Turn{" "}
-          <span className="blue-color-text">Insights into Action?</span>
-        </h2>
-        <p>
-          Completing your profile evaluation is just the beginning. Connect with
-          a career advisor to understand your analysis and map out your
-          personalized path to a management program. They're ready to help you
-          strategize and answer any questions
-        </p>
-        <button
-          className="upload-button"
-          onClick={() => {
-            window.location.href =
-              "https://calendly.com/studentsupport-1/counselling-call-crackverbal?utm_source=profile-app&utm_campaign=profile-eval&utm_medium=profile-page";
-          }}
-        >
-          Schedule My Free Call
-        </button>
-      </div>
-      <footer>
-        <div className="footerbar">
-          <img
-            src="https://lh3.googleusercontent.com/4MwUs0FiiSAX_d8ORJWpmp-xn1ifvguLFtr-x7vu_Km6CvmXUzE_pmbRW90uLOiPwbEneFAeXaJ-8gwtT2nAdVLsSYIsod2MrD8=s0"
-            alt="Logo"
-            className="navbar-logo"
-          />
-          <input
-            type="file"
-            ref={fileInputRef}
-            onChange={handleFileChange}
-            accept="application/pdf"
-            style={{ display: "none" }}
-          />
-          <p>All Copyrights reserved.</p>
+      <div className="insights-section-main">
+        <div className="insights-section">
+          <h2>Ready to Turn Insights into Action?</h2>
+          <p>
+            Completing your profile evaluation is just the beginning. Connect
+            with a career advisor to understand your analysis and map out your
+            personalized path to a management program. They're ready to help you
+            strategize and answer any questions
+          </p>
+          <button
+            className="upload-button-white"
+            onClick={() => {
+              window.location.href =
+                "https://calendly.com/studentsupport-1/counselling-call-crackverbal?utm_source=profile-app&utm_campaign=profile-eval&utm_medium=profile-page";
+            }}
+          >
+            Consult with a Career Advisor
+          </button>
         </div>
-      </footer>
+      </div>
     </div>
   );
 };
