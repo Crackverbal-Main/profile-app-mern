@@ -318,7 +318,7 @@ const PDFUploader = () => {
           </div>
         </div>
 
-        <div style={{ marginTop: "70px" }}>
+        <div className="how-it-works-parent">
           <h2 className="section-title">
             <span className="blue-color-text">How It Works: </span>
             Your Path to Management Program Readiness
@@ -326,135 +326,138 @@ const PDFUploader = () => {
           <HowItWorks />
         </div>
       </div>
-      <hr className="custom-hr" />
-
-      <div ref={analysisSectionRef} className="analysis-section">
-        <h2 className="section-title">
-          Resume <span className="blue-color-text">Analysis</span>
-        </h2>
-        <Toaster position="top-right" />
-        <div className="upload-section">
-          <div
-            className="drag-drop-box"
-            onDragOver={handleDragOver}
-            onDrop={handleDrop}
-            onClick={handleButtonClick}
-          >
-            <input
-              type="file"
-              ref={fileInputRef}
-              onChange={handleFileChange}
-              accept="application/pdf"
-              style={{ display: "none" }}
-            />
-            <img
-              src="/Group-179.png"
-              alt="Upload Icon"
-              width={100}
-              className="upload-icon"
-            />
-            <p>Drag and drop, or click to upload</p>
-          </div>
-
-          {openAIResponse && openAIResponse.length > 0 && (
-            <div>
-              <div className="ai-response-box">
-                <p>{getLimitedWords(openAIResponse[0])}</p>
-              </div>
-              {showOTPForm && (
-                <p>If you wish to know more, please register the form.</p>
-              )}
+      <div className="analysis-section-parent">
+        <div ref={analysisSectionRef} className="analysis-section">
+          <h2 className="section-title">
+            Resume <span className="blue-color-text">Analysis</span>
+          </h2>
+          <Toaster position="top-right" />
+          <div className="upload-section">
+            <div
+              className="drag-drop-box"
+              onDragOver={handleDragOver}
+              onDrop={handleDrop}
+              onClick={handleButtonClick}
+            >
+              <input
+                type="file"
+                ref={fileInputRef}
+                onChange={handleFileChange}
+                accept="application/pdf"
+                style={{ display: "none" }}
+              />
+              <img
+                src="/Group-179.png"
+                alt="Upload Icon"
+                width={100}
+                className="upload-icon"
+              />
+              <p>Drag and drop, or click to upload</p>
             </div>
-          )}
 
-          {attempts && showOTPForm && (
-            <div className="form-main">
-              <input
-                className="form-input"
-                type="text"
-                name="name"
-                placeholder="Name"
-                onChange={handleUserDataChange}
-              />
-              <input
-                className="form-input"
-                type="email"
-                name="email"
-                placeholder="Email"
-                onChange={handleUserDataChange}
-              />
-              <div className="form-row">
-                <PhoneInput
-                  country={"in"}
-                  value={userData.mobile}
-                  onChange={handleMobileChange}
-                  containerClass="phone-container"
-                  inputClass="phone-input"
-                />
-                <button
-                  className="otp-button send-otp"
-                  onClick={handleSendOTP}
-                  disabled={otpVerified}
-                >
-                  Send OTP
-                </button>
+            {openAIResponse && openAIResponse.length > 0 && (
+              <div>
+                <div className="ai-response-box">
+                  <p>{getLimitedWords(openAIResponse[0])}</p>
+                </div>
+                {showOTPForm && (
+                  <p>If you wish to know more, please register the form.</p>
+                )}
               </div>
-              <div className="form-row">
+            )}
+
+            {attempts && showOTPForm && (
+              <div className="form-main">
                 <input
-                  className="otp-input"
+                  className="form-input"
                   type="text"
-                  name="otp"
-                  placeholder="OTP"
+                  name="name"
+                  placeholder="Name"
                   onChange={handleUserDataChange}
                 />
+                <input
+                  className="form-input"
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  onChange={handleUserDataChange}
+                />
+                <div className="form-row">
+                  <PhoneInput
+                    country={"in"}
+                    value={userData.mobile}
+                    onChange={handleMobileChange}
+                    containerClass="phone-container"
+                    inputClass="phone-input"
+                  />
+                  <button
+                    className="otp-button send-otp"
+                    onClick={handleSendOTP}
+                    disabled={otpVerified}
+                  >
+                    Send OTP
+                  </button>
+                </div>
+                <div className="form-row">
+                  <input
+                    className="otp-input"
+                    type="text"
+                    name="otp"
+                    placeholder="OTP"
+                    onChange={handleUserDataChange}
+                  />
+                  <button
+                    className="otp-button verify-otp"
+                    onClick={handleVerifyOTP}
+                    disabled={otpVerified}
+                  >
+                    Verify OTP
+                  </button>
+                </div>
+                {otpVerified && (
+                  <div className="status-message success">
+                    OTP Verified Successfully
+                  </div>
+                )}
+                {otpPending && (
+                  <div className="status-message error">
+                    Please enter correct OTP
+                  </div>
+                )}
+              </div>
+            )}
+
+            {!attempts && (
+              <p className="usage-message">
+                You have used your max allocated usage.
+              </p>
+            )}
+            {attempts && otpVerified && (
+              <div className="download-button-container">
                 <button
-                  className="otp-button verify-otp"
-                  onClick={handleVerifyOTP}
-                  disabled={otpVerified}
+                  className="upload-button"
+                  onClick={downloadAIResponsePdf}
                 >
-                  Verify OTP
+                  Download Response
                 </button>
               </div>
-              {otpVerified && (
-                <div className="status-message success">
-                  OTP Verified Successfully
-                </div>
-              )}
-              {otpPending && (
-                <div className="status-message error">
-                  Please enter correct OTP
-                </div>
-              )}
-            </div>
-          )}
+            )}
 
-          {!attempts && (
-            <p className="usage-message">
-              You have used your max allocated usage.
-            </p>
-          )}
-          {attempts && otpVerified && (
-            <div className="download-button-container">
-              <button className="upload-button" onClick={downloadAIResponsePdf}>
-                Download Response
-              </button>
-            </div>
-          )}
-
-          {isLoading && (
-            <div className="progress-bar-container">
-              <div className="progress">
-                <div
-                  className="progress-bar"
-                  style={{ width: `${progress}%` }}
-                ></div>
+            {isLoading && (
+              <div className="progress-bar-container">
+                <div className="progress">
+                  <div
+                    className="progress-bar"
+                    style={{ width: `${progress}%` }}
+                  ></div>
+                </div>
+                <p>{statusMessage}</p>
               </div>
-              <p>{statusMessage}</p>
-            </div>
-          )}
+            )}
+          </div>
         </div>
       </div>
-      <hr className="custom-hr" />
+
       <div className="insights-section-main">
         <div className="insights-section">
           <h2>Ready to Turn Insights into Action?</h2>
