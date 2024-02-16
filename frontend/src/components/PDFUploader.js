@@ -85,7 +85,7 @@ const PDFUploader = () => {
   }, []); // Empty dependency array ensures this effect runs only once on mount
 
   useEffect(() => {
-    const ws = new WebSocket("ws://localhost:5000");
+    const ws = new WebSocket(`wss:${process.env.REACT_APP_WEB_SOCKET_API_URL}`);
 
     ws.onopen = () => {
       const newProcessId = `process-${Date.now()}-${Math.floor(
@@ -231,6 +231,8 @@ const PDFUploader = () => {
       headers: { "Content-Type": "multipart/form-data" },
     };
 
+    setProgress(20);
+    setStatusMessage("Uploading your resume...");
     try {
       // Upload PDF and process with OpenAI in one step
       const uploadResponse = await axios.post(
@@ -321,6 +323,9 @@ const PDFUploader = () => {
     );
   };
 
+  const triggerFileInputClick = () => {
+    fileInputRef.current.click();
+  };
   return (
     <div className="mian_container">
       <div>
@@ -413,7 +418,7 @@ const PDFUploader = () => {
               className="drag-drop-box"
               onDragOver={handleDragOver}
               onDrop={handleDrop}
-              onClick={handleButtonClick}
+              onClick={triggerFileInputClick}
             >
               <input
                 type="file"
