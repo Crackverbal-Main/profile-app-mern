@@ -41,7 +41,7 @@ exports.sendOTP = async (req, res) => {
     await client.messages.create({
       src: process.env.PLIVO_SENDER_ID, // Replace with your Plivo number
       dst: formattedMobile,
-      text: `Your OTP is: ${otp}`,
+      text: `${otp} - is your OTP to log in. Please do not share your OTP with anyone. Team -Crackverbal.`,
     });
 
     res.status(200).json({ message: "OTP sent successfully" });
