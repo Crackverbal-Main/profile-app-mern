@@ -331,11 +331,13 @@ const PDFUploader = () => {
       <div>
         <nav>
           <div className="navbar">
-            <img
-              src="https://lh3.googleusercontent.com/4MwUs0FiiSAX_d8ORJWpmp-xn1ifvguLFtr-x7vu_Km6CvmXUzE_pmbRW90uLOiPwbEneFAeXaJ-8gwtT2nAdVLsSYIsod2MrD8=s0"
-              alt="Logo"
-              className="navbar-logo"
-            />
+            <a href="https://crackverbals-6.webflow.io/">
+              <img
+                src="/crackverbal-logo.png"
+                alt="Logo"
+                className="navbar-logo"
+              />
+            </a>
 
             <button onClick={handleButtonClick} className="upload-button">
               Upload My Resume
@@ -555,6 +557,33 @@ const PDFUploader = () => {
           </button>
         </div>
       </div>
+      <footer>
+        <div className="footer">
+          <a href="https://crackverbals-6.webflow.io/">
+            <img
+              src="/crackverbal-logo.png"
+              alt="Logo"
+              className="navbar-logo"
+            />
+          </a>
+          <div className="footer-list-item">
+            <div>
+              <a href="https://crackverbals-6.webflow.io/">
+                © 2024 Crackverbal
+              </a>
+            </div>
+            <div>
+              <a href="https://crackverbals-6.webflow.io/">Terms</a>{" "}
+            </div>
+            <div>
+              <a href="https://crackverbals-6.webflow.io/">Privacy</a>
+            </div>
+            <div>
+              <a href="https://crackverbals-6.webflow.io/">Cookies</a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
