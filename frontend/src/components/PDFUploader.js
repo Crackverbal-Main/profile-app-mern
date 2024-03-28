@@ -340,7 +340,7 @@ const PDFUploader = () => {
             </a>
 
             <button onClick={handleButtonClick} className="upload-button">
-              Upload My Resume
+              Upload Your Resume
             </button>
           </div>
         </nav>
@@ -360,7 +360,7 @@ const PDFUploader = () => {
               </p>
 
               <button onClick={handleButtonClick} className="upload-button">
-                Upload My Resume
+                Upload Your Resume
               </button>
             </div>
           </div>
