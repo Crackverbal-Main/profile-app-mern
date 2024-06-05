@@ -547,7 +547,7 @@ const PDFUploader = () => {
             Completing your profile evaluation is just the beginning. Connect
             with a career advisor to understand your analysis and map out your
             personalized path to a management program. They're ready to help you
-            strategize and answer any questions
+            strategize and answer any questions.
           </p>
           <button
             className="upload-button-white"
