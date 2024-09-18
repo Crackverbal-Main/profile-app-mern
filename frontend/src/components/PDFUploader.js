@@ -351,8 +351,8 @@ const PDFUploader = () => {
             </div>
             <div className="text-container">
               <h1>
-                Evaluate Your Fitment for a{" "}
-                <span className="blue-color-text">Management Program</span>
+              Find out if you're ready for a top management program with our{" "}
+                <span className="blue-color-text">AI-powered profile evaluation tool.</span>
               </h1>
               <p>
                 Discover Your Potential with Our Advanced Profile Evaluation
