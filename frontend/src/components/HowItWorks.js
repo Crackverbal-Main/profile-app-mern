@@ -12,12 +12,10 @@ export default function HowItWorks() {
           1
         </div>
         <div className="timeline__event__content">
-          <div className="timeline__event__title">Upload Your Resume/CV:</div>
+          <div className="timeline__event__title">Upload Your Resume:</div>
           <div className="timeline__event__description">
             <p>
-              Attach your most recent resume or CV. Our tool evaluates your
-              academic achievements, professional experience, and
-              extracurricular involvements.
+            Share your current resume, CV, or PDF of your LinkedIn profile.
             </p>
           </div>
         </div>
@@ -33,12 +31,10 @@ export default function HowItWorks() {
           2
         </div>
         <div className="timeline__event__content">
-          <div className="timeline__event__title">AI-Powered Analysis:</div>
+          <div className="timeline__event__title">AI Evaluation:</div>
           <div className="timeline__event__description">
             <p>
-              Our advanced AI system assesses your profile, comparing it against
-              criteria from various management programs for a comprehensive
-              fitment analysis.
+            Our AI analyzes your profile against management program criteria.
             </p>
           </div>
         </div>
@@ -52,11 +48,10 @@ export default function HowItWorks() {
           3
         </div>
         <div className="timeline__event__content">
-          <div className="timeline__event__title">Fill Out a Brief Form:</div>
+          <div className="timeline__event__title">Complete a Brief Form:</div>
           <div className="timeline__event__description">
             <p style={{ paddingTop: "15px", paddingBottom: "15px" }}>
-              Provide basic information to personalize your report and help us
-              get in touch with you.
+            Provide a few key details to customize your report.
             </p>
           </div>
         </div>
@@ -71,12 +66,11 @@ export default function HowItWorks() {
         </div>
         <div className="timeline__event__content">
           <div className="timeline__event__title">
-            Receive Your Personalized Report:
+          Get Your Report:
           </div>
           <div className="timeline__event__description">
             <p>
-              Get a detailed report highlighting your alignment with management
-              programs, showcasing your competitive edge and areas for growth.
+            Receive a detailed analysis of your management program readiness.
             </p>
           </div>
         </div>
@@ -91,12 +85,11 @@ export default function HowItWorks() {
         </div>
         <div className="timeline__event__content">
           <div className="timeline__event__title">
-            Consultation with an Expert:
+          Expert Consultation:
           </div>
           <div className="timeline__event__description">
             <p>
-              Schedule a call with a career expert to delve deeper into your
-              results and discuss strategies for your management career journey.
+            Discuss your results with an expert career advisor.
             </p>
           </div>
         </div>

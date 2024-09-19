@@ -1,5 +1,5 @@
 h1 {
-  font-size: 3.25rem;
+  font-size: 40px;
   font-weight: 700;
 }
 
@@ -145,7 +145,7 @@ a {
 }
 .management-card-main {
   display: flex;
-  gap: 2rem;
+  gap: 10px;
   text-align: justify;
   flex-wrap: wrap; /* Allow cards to wrap to the next row */
   align-items: start;
@@ -165,8 +165,7 @@ a {
   background-color: white;
   width: 100%; /* By default, each card takes the full width in mobile view */
   margin-bottom: 20px; /* Add some spacing between cards */
-  min-width: 400px;
-  min-height: 395px;
+  min-height: 320px;
   padding: 2.5rem;
   border-radius: 25px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -190,7 +189,7 @@ a {
 }
 
 .management-card-main {
-  width: 75%;
+  width: 90%;
   margin: auto; /* Centers the section */
 }
 

@@ -374,28 +374,23 @@ const PDFUploader = () => {
           <div className="management-card-main">
             <div className="management-card">
               <img src="/12.png" alt="card1" />
-              <h3 className="blue-color-text">Tailored Analysis:</h3>
+              <h3 className="blue-color-text">Instant, Tailored Insights</h3>
               <p>
-                Receive a detailed analysis of your academic and professional
-                background, personalized to align with various management
-                programs.
+              Get a customized analysis of your management potential in minutes.
               </p>
             </div>
             <div className="management-card">
               <img src="/15.png" alt="card2" />
-              <h3 className="blue-color-text">Insightful Feedback:</h3>
+              <h3 className="blue-color-text">Reveal Your Competitive Edge:</h3>
               <p>
-                Understand how your profile fits with management program
-                expectations, including your strengths and areas for
-                improvement.
+              Discover your unique strengths and standout qualities for top programs.
               </p>
             </div>
             <div className="management-card">
               <img src="/14.png" alt="card3" />
-              <h3 className="blue-color-text">Simple and Effective:</h3>
+              <h3 className="blue-color-text">Clear Path Forward:</h3>
               <p>
-                Just upload your resume or CV, and our tool takes care of the
-                rest, providing straightforward and insightful results.
+              Receive targeted advice to boost your application and career prospects.
               </p>
             </div>
           </div>
@@ -540,15 +535,13 @@ const PDFUploader = () => {
       <div className="insights-section-main">
         <div className="insights-section">
           <h2>
-            Ready to Turn{" "}
-            <span style={{ color: "#0029e4" }}>Insights into Action?</span>
+            Take the{" "}
+            <span style={{ color: "#0029e4" }}>Next Step</span>
           </h2>
           <p>
-            Completing your profile evaluation is just the beginning. Connect
-            with a career advisor to understand your analysis and map out your
-            personalized path to a management program. They're ready to help you
-            strategize and answer any questions.
+          Your profile evaluation is just the start. Connect with our career advisors now.
           </p>
+          
           <button
             className="upload-button-white"
             onClick={() => {
@@ -556,7 +549,7 @@ const PDFUploader = () => {
                 "https://calendly.com/studentsupport-1/counselling-call-crackverbal?utm_source=profile-app&utm_campaign=profile-eval&utm_medium=profile-page";
             }}
           >
-            Consult with a Career Advisor
+            Schedule Your Free Consultation
           </button>
         </div>
       </div>
