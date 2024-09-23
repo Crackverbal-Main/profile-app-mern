@@ -351,8 +351,8 @@ const PDFUploader = () => {
             </div>
             <div className="text-container">
               <h1>
-              Find out if you're ready for a top management program with our{" "}
-                <span className="blue-color-text">AI-powered profile evaluation tool.</span>
+              Evaluate Your MBA Readiness with{" "}
+                <span className="blue-color-text">AI Insights</span>
               </h1>
               <p>
                 Discover Your Potential with Our Advanced Profile Evaluation
@@ -511,7 +511,7 @@ const PDFUploader = () => {
                   className="upload-button"
                   onClick={downloadAIResponsePdf}
                 >
-                  Download Response
+                  Download Report
                 </button>
               </div>
             )}
